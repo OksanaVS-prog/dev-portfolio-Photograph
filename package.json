@@ -1,0 +1,30 @@
+{
+  "name": "dev-portfolio-photograph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OksanaVS-prog/dev-portfolio-Photograph.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OksanaVS-prog/dev-portfolio-Photograph/issues"
+  },
+  "homepage": "https://github.com/OksanaVS-prog/dev-portfolio-Photograph#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "del": "^6.1.1",
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^3.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-terser": "^2.1.0"
+  }
+}
