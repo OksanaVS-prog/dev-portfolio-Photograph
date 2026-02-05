@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Меблі</title>
+    <meta name="description" content="Сучасні меблі для дому. Комфорт, стиль і якість.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Welcome to My Portfolio</h1>
+    @@include('../pages/header.html')
+
+    <main>
+        @@include('../pages/banner.html')
+        @@include('../pages/about.html')
+        @@include('../pages/collection-furniture.html')
+        @@include('../pages/catalog-furniture.html')
+        @@include('../pages/services.html')
+        @@include('../pages/contacts.html')
+    </main>
+
+    @@include('../pages/footer.html')
+
+    <script src="js/main.js"></script>
 </body>
 </html>
+

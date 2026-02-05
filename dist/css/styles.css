@@ -1,1 +1,1 @@
-body{background-color:pink}h1{color:#00f}
+body{background-color:#fff}.container{max-width:1440px;margin:0 auto;padding:0 15px}.about{padding:64px 134px 62px 93px;background-color:#000;color:#fff}.about-inner{display:flex;gap:40px;align-items:stretch}.about-text{width:50%}.about-image{width:50%;border:2px solid red}.about-image img{width:100%;display:block}.about h1,.about p{color:#fff}.about-text h1{font-size:66px;line-height:69px;margin-top:14px;margin-bottom:20px}.about-text p{margin-bottom:20px;line-height:100%;font-size:26px;opacity:.9}
