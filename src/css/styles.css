@@ -31,7 +31,7 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: #000;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -39,12 +39,17 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
   padding: 64px 134px 62px 93px;
-  background-color: #000;       
-  color: #fff;                  
+  background-color: #fff;       
+  color: #000;                  
 }
 
 .about-inner {
@@ -72,20 +77,13 @@ body {
   display: block;
 }
 
-.about h2, 
-.about p,
-.about span {
-  color: #fff;
-}
-
-
 .about-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 66px;
   line-height: 69px;
   margin: 14px 0 40px 0;
-  color: #fff;
+  color: #000;
 }
 
 .about-content p,
@@ -95,15 +93,15 @@ body {
   line-height: 1.5;
   font-size: 26px;
   opacity: 0.9;
-  color: #fff;
+  color: #000;
   font-weight: 400;
 }
 
 .about-btn {
   margin-top: 22px;
   margin-bottom: 14px;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   border: none;
   padding: 18px 64px;
   font-size: 23px;
@@ -152,5 +150,111 @@ body {
 
   .about {
     padding: 40px 15px;
+  }
+}
+/* Общий баннер */
+.banner {
+  position: relative;            
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 134px 62px 93px;
+  height: 932px;                 
+  background: url('../img/banner.png') center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Навбар сверху */
+.banner-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+  z-index: 3;                  
+}
+
+.logo {
+  color: #fff;
+  width: 72px;
+  height: 72px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 58px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+/* Центральная картинка */
+.banner-center-image {
+  position: absolute;
+  bottom: 341px;                   
+  left: 50%;                   
+  transform: translate(-50%, -50%);
+  z-index: 2;                  
+  max-width: 50%;              
+  height: auto;
+}
+
+/* Стрелка вниз */
+.banner-arrow {
+  position: absolute;
+  bottom: 66px;                
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.banner-arrow img {
+  width: 93px;
+  height: 93px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.banner-arrow img:hover {
+  transform: scale(1.2);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .banner {
+    height: 500px;
+  }
+
+  .banner-center-image {
+    max-width: 70%;
+  }
+
+  .banner-arrow img {
+    width: 40px;
+  }
+
+  .banner-header {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 20px;
   }
 }
