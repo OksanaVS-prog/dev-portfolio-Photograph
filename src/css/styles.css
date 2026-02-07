@@ -1,5 +1,38 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -15,39 +48,109 @@ body {
 }
 
 .about-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: stretch;
+  align-items: start;
 }
 
-.about-text {
-  width: 50%;
-}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* распределяем текст сверху, кнопку снизу */
+  height: 100%; /* чтобы колонка занимала всю высоту родителя */
+} 
 
 .about-image {
-  width: 50%;
-  border: 2px solid red;              /* белая рамка вокруг изображения */
+  display: flex;           /* flex-контейнер для растягивания */
 }
 
 .about-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-.about h1,
-.about p {
+.about h2, 
+.about p,
+.about span {
   color: #fff;
 }
-.about-text h1 {
+
+
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 66px;
   line-height: 69px;
-  margin-top: 14px;
-  margin-bottom: 20px;
+  margin: 14px 0 40px 0;
+  color: #fff;
 }
 
-.about-text p {
-  margin-bottom: 20px;
-  line-height: 100%;
+.about-content p,
+.about-content span {
+  display: block;
+  margin-bottom: 40px;
+  line-height: 1.5;
   font-size: 26px;
-  opacity: 0.9;                 /* чуть мягче для белого на черном */
+  opacity: 0.9;
+  color: #fff;
+  font-weight: 400;
+}
+
+.about-btn {
+  margin-top: 22px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 18px 64px;
+  font-size: 23px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none; 
+  display: inline-block;
+  align-self: flex-start;
+} 
+
+.about-btn:hover {
+  background-color: rgb(202, 170, 88);
+  color: rgb(68, 21, 21);
+}
+
+@media (max-width: 768px) {
+  .about-inner {
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+
+  .about-image {
+    order: -1; 
+    width: 100%; 
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .about-content p,
+  .about-content span {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .about-btn {
+    padding: 14px 40px;
+    font-size: 20px;
+  }
+
+  .about {
+    padding: 40px 15px;
+  }
 }

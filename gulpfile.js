@@ -49,10 +49,16 @@ function js() {
 // 5. Копирование изображений
 // -----------------
 function images() {
-  return src('src/img/**/*')   // берём все картинки из src/img
-    .pipe(dest('dist/img'))    // копируем в dist/img
-    .pipe(browserSync.stream());
+  return src('src/img/**/*', { encoding: false })
+    .pipe(dest('dist/img'));
 }
+
+
+//function images() {
+//  return src('src/img/**/*')   // берём все картинки из src/img
+//    .pipe(dest('dist/img'))    // копируем в dist/img
+//    .pipe(browserSync.stream());
+//}
 
 // -----------------
 // 6. Сервер с live reload
