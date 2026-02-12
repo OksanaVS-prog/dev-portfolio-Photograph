@@ -152,6 +152,7 @@ section {
   .about-btn {
     padding: 14px 40px;
     font-size: 20px;
+    align-self: center;
   }
 
   .about {
@@ -164,7 +165,7 @@ section {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 64px 134px 62px 93px;
+  padding: 0;
   height: 932px;                 
   background: url('../img/banner.png') center/cover no-repeat;
   overflow: hidden;
@@ -174,9 +175,9 @@ section {
   position: relative;
   top: 0;
   left: 0;
-  padding: 0;
+  padding: 55px 86px 44px 69px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 72px;
   z-index: 3;                  
@@ -186,6 +187,12 @@ section {
   color: #fff;
   width: 72px;
   height: 72px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 58px;
 }
 
 .nav-links {
@@ -204,6 +211,29 @@ section {
 
 .nav-links a:hover {
   color: #f0a500;
+}
+
+
+
+.languages a,
+.languages span {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: white;
 }
 
 .banner-center-image {
@@ -235,29 +265,68 @@ section {
   transform: scale(1.2);
 }
 
+.mobile-menu { 
+  display: none; }
+
 @media (max-width: 768px) {
   .banner {
     height: 500px;
   }
 
+  .banner-header {
+    gap: 36px; 
+  }
+
+  .languages a,
+  .languages span {
+    font-size: 12px; 
+    margin-right: 3px;
+    }
+
   .banner-center-image {
-    max-width: 70%;
+    bottom: 145px;
   }
 
   .banner-arrow img {
     width: 40px;
+    height: 40px;
   }
 
   .banner-header {
     padding: 10px 20px;
   }
 
+  .logo {
+    font-size: 20px;
+  }
+
   .nav-links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
     gap: 15px;
   }
 
-  .logo {
-    font-size: 20px;
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .mobile-menu.active {
+    display: flex;
   }
 }
 
