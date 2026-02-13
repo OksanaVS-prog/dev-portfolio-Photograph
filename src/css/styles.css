@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Light.woff2') format('woff2');
@@ -36,7 +40,6 @@ body {
 }
 
 section {
-  padding: 100px 0; /* разделение между секциями */
   width: 100%;
   box-sizing: border-box;
 }
@@ -52,7 +55,7 @@ section {
 .about {
   max-width: 1440px;
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 0 auto 0 auto;
   padding: 64px 134px 62px 93px;
   background-color: #fff;       
   color: #000;                  
@@ -159,7 +162,7 @@ section {
     padding: 40px 15px;
   }
 }
-/* Общий баннер */
+
 .banner {
   position: relative;            
   width: 100%;
@@ -212,8 +215,6 @@ section {
 .nav-links a:hover {
   color: #f0a500;
 }
-
-
 
 .languages a,
 .languages span {
@@ -332,7 +333,7 @@ section {
 
 section.collection {
   width: 100%;
-  padding: 100px 0; 
+  padding: 0; 
   box-sizing: border-box;
 }
 
@@ -491,7 +492,128 @@ section.collection {
     margin-bottom: 40px;
   }
 }
+.services .container {
+  background-color: #FAFAFA;
+  padding: 115px 0 60px 0;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 55px 60px;
+  position: relative;
+  margin-bottom: 55px;
+}
+
+.service-row::after {
+  content: "";
+  position: absolute;
+  left: 62px;
+  right: 62px;
+  bottom: 0;
+  height: 1px;
+  background-color: #000;
+}
+
+.service-row:first-child::before {
+  content: "";
+  position: absolute;
+  left: 62px;
+  right: 62px;
+  top: 0;
+  height: 1px;
+  background-color: #000;
+}
+
+.service-title h3 {
+  font-size: 92px;
+  font-weight: 300;
+  line-height: 120px;
+  min-width: 569px;
+  margin: 0;
+}
 
 
+.service-description p {
+  font-size: 32px;
+  line-height: 60px;
+  max-width: 500px;
+  padding-left: 150px;
+}
 
+.service-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+.service-image img:hover {
+transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .service-row {
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 30px;
+    padding: 45px 40px;
+  }
+
+  .service-title h3 {
+    font-size: 72px;
+    line-height: 100px;
+    min-width: auto; /* чтобы не ломало сетку */
+  }
+
+  .service-description p {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 100px;
+  }
+
+  .service-image img {
+    max-width: 250px;
+  }
+
+  /* Линии */
+  .service-row::after,
+  .service-row:first-child::before {
+    left: 40px;
+    right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .service-title h3 {
+    font-size: 48px;
+    line-height: 60px;
+    min-width: auto;
+  }
+
+  .service-description p {
+    font-size: 22px;
+    line-height: 36px;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .service-image img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .service-row::after,
+  .service-row:first-child::before {
+    left: 20px;
+    right: 20px;
+  }
+}
 

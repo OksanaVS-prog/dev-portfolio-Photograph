@@ -16,10 +16,10 @@ function clean() {
 // 2. Сборка HTML с @@include
 // -----------------
 function html() {
-  return src('src/html/*.html') // главные страницы
+  return src('src/html/*.html')
     .pipe(fileInclude({
-      prefix: '@@',       // синтаксис @@include
-      basepath: '@file'   // пути относительно файла
+      prefix: '@@',
+      basepath: '@file'
     }))
     .pipe(dest('dist'))
     .pipe(browserSync.stream());
@@ -50,27 +50,26 @@ function js() {
 // -----------------
 function images() {
   return src('src/img/**/*', { encoding: false })
-    .pipe(dest('dist/img'));
+    .pipe(dest('dist/img'))
+    .pipe(browserSync.stream());
 }
-
-
-//function images() {
-//  return src('src/img/**/*')   // берём все картинки из src/img
-//    .pipe(dest('dist/img'))    // копируем в dist/img
-//    .pipe(browserSync.stream());
-//}
 
 // -----------------
 // 6. Сервер с live reload
 // -----------------
 function serve() {
-  browserSync.init({ server: { baseDir: 'dist' } });
+  browserSync.init({
+    server: { baseDir: 'dist' },
+    port: 3000,      // явный порт
+    open: true,      // автоматически откроет браузер
+    notify: false    // отключаем уведомления
+  });
 
   watch('src/html/*.html', html);
   watch('src/pages/*.html', html);   // partials
   watch('src/css/*.css', css);
   watch('src/js/*.js', js);
-  watch('src/img/**/*', images);     // отслеживаем картинки
+  watch('src/img/**/*', images);
 }
 
 // -----------------
@@ -81,4 +80,3 @@ exports.default = series(
   parallel(html, css, js, images),
   serve
 );
-
