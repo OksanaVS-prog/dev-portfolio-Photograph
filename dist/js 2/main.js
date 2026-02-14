@@ -1,1 +1,0 @@
-console.log("main.js подключён");const burger=document.getElementById("burger"),mobileMenu=document.getElementById("mobileMenu");burger&&mobileMenu&&burger.addEventListener("click",()=>{mobileMenu.classList.toggle("active"),burger.classList.toggle("active")});
