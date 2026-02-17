@@ -710,3 +710,182 @@ transform: scale(1.1);
   }
 }
 
+/* ===== Контейнер и колонки ===== */
+.contacts .container {
+  background-color: #fff;
+  display: flex;
+  max-width: 1440px;       /* ограничиваем ширину блока */
+  margin: 0 auto;           /* центрируем блок */
+  padding: 50px 62px;       /* паддинги слева/справа */
+  box-sizing: border-box;
+  gap: 149px;               /* расстояние между колонками */
+  align-items: stretch;     /* колонки одинаковой высоты */
+}
+
+.contact-info {
+  flex: 0 0 409px;          /* левая колонка фиксированная */
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info h2 {
+  margin: 0 0 60px 0;
+  font-size: 66px;
+  line-height: 69px;
+  font-weight: 600;
+  color: #1E1E1E;
+}
+
+.contact-info p, .contact-info a {
+  font-size: 24px;
+  line-height: 69px;
+  color: #575757;
+  margin: 0 0 29px 0;
+}
+
+.socials strong {
+  display: block;
+  margin-bottom: 34px;
+  font-size: 24px;
+  color: #575757;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 1 1 0;             /* правая колонка сжимается по ширине */
+  display: flex;
+  flex-direction: column;
+  min-width: 0;            /* предотвращаем переполнение */
+}
+
+.form-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; 
+}
+
+.form-wrapper form {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.form-row {
+  display: flex;
+  gap: 136px;
+  margin-bottom: 36px;
+  min-width: 0;  
+}
+
+.form-row input {
+  flex: 1 1 auto;
+  padding: 15px;
+  border: 1px solid #f2f3f0;
+  background-color: #F2F3F0;
+  border-radius: 7px;
+  font-size: 24px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.message-row {
+  flex: 1 1 auto;           /* растягиваем textarea по высоте */
+  display: flex;
+  flex-direction: column;
+}
+
+.message-row textarea {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #f2f3f0;
+  background-color: #f2f3f0;
+  border-radius: 7px;
+  font-size: 24px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.submit-row {
+  margin-top: 20px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  background: #1E1E1E;
+  color: #f2f3f0;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.btn-submit:hover {
+  background: #a5a5a3;
+  color: #472306;
+}
+
+@media (max-width: 1024px) {
+  .contacts .container {
+    padding: 50px 40px;
+    gap: 60px;
+  }
+
+  .contact-info {
+    flex: 0 0 320px;  
+  }
+
+  .form-row:first-child {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row {
+    gap: 56px;
+  }
+
+  .contact-info h2 {
+    font-size: 46px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+
+  .contact-info p, .contact-info a {
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 21px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts .container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 20px;
+    align-items: center;    /* центрируем колонки */
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+    max-width: 500px;       /* центрируем блок на мобильных */
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .message-row textarea {
+    min-height: 400px; 
+  }
+}
