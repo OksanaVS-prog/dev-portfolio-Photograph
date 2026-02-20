@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Меблі</title>
     <meta name="description" content="Сучасні меблі для дому. Комфорт, стиль і якість.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -115,7 +116,254 @@
 </div>
 </section>
 
-        
+        <section class="catalog py-5">
+  <div class="container">
+
+    <ul class="nav nav-tabs justify-content-center mb-4" id="catalogTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#beds">Ліжка</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#wardrobes">Шкафи</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tables">Столи</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#chairs">Стільця</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nightstands">Тумби</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="catalogTabsContent">
+
+      <!-- Ліжка -->
+      <div class="tab-pane fade show active" id="beds">
+        <div class="row g-4">
+          <!-- Товар 1 -->
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/bed1.png" class="card-img-left" alt="Ліжко Comfort">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Ліжко Comfort</h5>
+                <p class="card-text">Зручне ліжко з ортопедичним матрацом</p>
+                <p class="product-price">38 000 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+          <!-- Товар 2 -->
+          <div class="col-12">
+            <div class="card  product-card">
+              <img src="../img/bed2.png" class="card-img-left" alt="Ліжко Milano">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Ліжко Milano</h5>
+                <p class="card-text">Сучасне ліжко для спальні з підсвіткою</p>
+                <p class="product-price">45 000 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Шкафи -->
+      <div class="tab-pane fade" id="wardrobes">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/wardrob1.png" class="card-img-left" alt="Шафа Elegance">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Шафа Elegance</h5>
+                <p class="card-text">Сучасна шафа з натурального дерева</p>
+                <p class="product-price">52 000 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card  product-card">
+              <img src="../img/wardrob2.png" class="card-img-left" alt="Шафа Classic">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Шафа Classic</h5>
+                <p class="card-text">Проста і функціональна шафа для дому</p>
+                <p class="product-price">48 000 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Столи -->
+      <div class="tab-pane fade" id="tables">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/table1.png" class="card-img-left" alt="Стіл Modern">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Стіл Modern</h5>
+                <p class="card-text">Стіл для їдальні з натурального дерева</p>
+                <p class="product-price">15 000 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+           <div class="col-12">
+            <div class="card  product-card">
+              <img src="../img/table2.png" class="card-img-left" alt="Стіл Modern">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Стіл Comfort</h5>
+                <p class="card-text">Стіл для їдальні з натурального дерева</p>
+                <p class="product-price">13 000 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Стільця -->
+      <div class="tab-pane fade" id="chairs">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/chair1.png" class="card-img-left" alt="Стілець Classic">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Стілець Classic</h5>
+                <p class="card-text">Зручний стілець для дому та офісу</p>
+                <p class="product-price">3 500 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/chair2.png" class="card-img-left" alt="Стілець Comfort">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Стілець Comfort</h5>
+                <p class="card-text">Зручний стілець для дому та офісу</p>
+                <p class="product-price">2 500 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Тумби -->
+      <div class="tab-pane fade" id="nightstands">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/nightstand1.png" class="card-img-left" alt="Тумба Night">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Тумба Night</h5>
+                <p class="card-text">Невелика тумба для спальні</p>
+                <p class="product-price">4 200 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card product-card">
+              <img src="../img/nightstand2.png" class="card-img-left" alt="Тумба Night">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Тумба</h5>
+                <p class="card-text">Невелика тумба для спальні</p>
+                <p class="product-price">3 800 ₴</p>
+                <div class="mb-2">
+                  <span class="color-label">Колір:</span>
+                  <div class="color-options mt-1">
+                    <span class="color-dot brown"></span>
+                    <span class="color-dot beige"></span>
+                    <span class="color-dot dark"></span>
+                  </div>
+                </div>
+                <button class="btn btn-primary">Додати до списку</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
         <section class="services" id="services">
   <div class="container">
 
@@ -223,6 +471,7 @@
 
     
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
