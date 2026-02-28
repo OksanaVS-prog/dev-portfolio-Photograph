@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth <= 1024) return;
 
   let scrollAmount = 0;
-  const speed = 0.5;   // скорость
-  const delay = 10;    // плавность
+  const speed = 2.5;   // скорость
+  const delay = 20;    // плавность
 
   function autoScroll() {
     scrollAmount += speed;
